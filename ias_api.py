@@ -77,7 +77,7 @@ class InventoryList(Resource):
         else:
             # otherwise the itemName does not exist
             return {
-                'message': f"'{args['itemName']}' user not found."
+                'message': f"'{args['itemName']}' item not found."
             }, 404
 
     def delete(self):
@@ -101,9 +101,9 @@ class InventoryList(Resource):
             return {'data': new_data.to_dict()}, 200
 
         else:
-            # otherwise we return 404 because userId does not exist
+            # otherwise we return 404 because itemId does not exist
             return {
-                'message': f"'{args['itemName']}' user not found."
+                'message': f"'{args['itemName']}' item not found."
             }, 404
 
 
@@ -170,7 +170,7 @@ class ShoppingList(Resource):
         else:
             # otherwise the itemName does not exist
             return {
-                'message': f"'{args['itemName']}' user not found."
+                'message': f"'{args['itemName']}' item not found."
             }, 404
 
     def delete(self):
@@ -194,9 +194,9 @@ class ShoppingList(Resource):
             return {'data': new_data.to_dict()}, 200
 
         else:
-            # otherwise we return 404 because userId does not exist
+            # otherwise we return 404 because itemId does not exist
             return {
-                'message': f"'{args['itemName']}' user not found."
+                'message': f"'{args['itemName']}' item not found."
             }, 404
 
 
